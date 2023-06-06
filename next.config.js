@@ -5,6 +5,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
+  productionBrowserSourceMaps: false,
+  poweredByHeader: false,
+
+  transpilePackages: ['lodash', '@mui/material', '@mui/styles'],
 });
 
 module.exports = nextConfig;
