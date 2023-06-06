@@ -1,6 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.NODE_ENV === 'production',
+});
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = withBundleAnalyzer({
+  reactStrictMode: true,
+  productionBrowserSourceMaps: false,
+  poweredByHeader: false,
+
+  transpilePackages: ['lodash'],
+});
+
+module.exports = nextConfig;
