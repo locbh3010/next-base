@@ -10,7 +10,6 @@
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .eslintignore --fix",
     "lint:css": "stylelint \"src/scss/**/*.scss\" --fix",
     "lint": "yarn lint:js && yarn lint:css",
-    "prepare": "husky install",
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"

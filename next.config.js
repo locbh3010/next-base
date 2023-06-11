@@ -16,3 +16,5 @@ const nextConfig = withBundleAnalyzer({
 
   transpilePackages: ['lodash'],
 });
+
+module.exports = nextConfig;
